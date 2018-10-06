@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body {margin: 0;}
+
+ul.sidenav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 20%;
+    background-color: #d1d3d4;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+}
+
+ul.sidenav li a {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+ 
+ul.sidenav li a.active {
+    background-color: #c2011b;
+    color: white;
+}
+
+ul.sidenav li a:hover:not(.active) {
+    background-color: #555;
+    color: white;
+}
+
+div.content {
+    margin-left: 25%;
+    padding: 1px 16px;
+    height: 1000px;
+}
+
+@media screen and (max-width: 900px) {
+    ul.sidenav {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+    ul.sidenav li a {
+        float: left;
+        padding: 15px;
+    }
+    div.content {margin-left: 0;}
+}
+
+@media screen and (max-width: 400px) {
+    ul.sidenav li a {
+        text-align: center;
+        float: none;
+    }
+}
+</style>
+</head>
+<body>
+
+<ul class="sidenav">
+  <li><a href="Landing Page.html" >Home</a></li>
+  <li><a class="active" href="UserInventory.html" >Inventory</a></li>
+  <li><a href="UserNotification.html" >Notifications</a></li>
+  <li><a href="UserAccount.html">Account</a></li>
+  <li><a href="UserContact.html" >Contact CO</a></li>
+</ul>
+
+<div class="content">
+  <h1>Valor Inventory Management System</h1><br>
+  <h2>Account</h2>
+  <h2>fname lname</h2>
+ 
+  
+</div>
+
+</body>
+</html>
