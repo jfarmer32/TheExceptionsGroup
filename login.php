@@ -44,7 +44,7 @@
 		$rows = mysql_num_rows($query);
 		if ($rows == 1) 
 		{
-			echo file_get_contents("Landing Page.html");
+			echo file_get_contents("UserHomepage.html");
 			//$_SESSION['login_user']=$username; // Initializing Session
 			//header("location: profile.php"); // Redirecting To Other Page
 		}
