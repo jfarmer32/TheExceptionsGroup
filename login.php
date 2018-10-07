@@ -1,39 +1,18 @@
 <?php 
 	
-	//echo ($_POST['username'];
+	session_start(); 
 	$error = "";
 	if(isset($_POST['send']))
 	if (empty($_POST['username']) || empty($_POST['password']))
 	{
 		$error = "Username or Password is Blank";
-		//echo("hey empty");
+		
 	}
 	else
 	{
-		//echo("hey");
 		$username = $_POST['username'];
 		$password = $_POST['password'];
-		/*
-		if($username == "admin" && $password == "admin")
-		{
-			echo file_get_contents("Landing Page.html");
-		}
-		else
-		{
-			if($username != "admin" && $password == "admin")
-			{
-				$error = "Username is Inccorect";
-			}
-			else if($password != "admin" && $username == "admin")
-			{
-				$error = "Password is Inccorect";
-			}
-			else
-			{
-				$error = "Username and Password is Incorrect";
-			}
-		}
-		*/
+
 		$SeverConnection = mysql_connect("localhost", "jfarmer32", "Exceptions370");
 		$username = stripslashes($username);
 		$password = stripslashes($password);
@@ -45,8 +24,7 @@
 		if ($rows == 1) 
 		{
 			echo file_get_contents("UserHomepage.html");
-			//$_SESSION['login_user']=$username; // Initializing Session
-			//header("location: profile.php"); // Redirecting To Other Page
+			$_SESSION['login_user']=$username; 
 		}
 		else 
 		{
