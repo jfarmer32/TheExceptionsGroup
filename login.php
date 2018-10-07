@@ -34,7 +34,7 @@
 			}
 		}
 		*/
-		$SeverConnection = mysql_connect("localhost", "root", "");
+		$SeverConnection = mysql_connect("localhost", "jfarmer32", "Exceptions370");
 		$username = stripslashes($username);
 		$password = stripslashes($password);
 		$username = mysql_real_escape_string($username);
