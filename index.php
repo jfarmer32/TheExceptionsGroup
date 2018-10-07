@@ -1,9 +1,5 @@
 <?php
 	include('login.php');
-	if(isset($_SESSION['login_user']))
-	{
-		echo file_get_contents("UserHompage.html");
-	}
 ?>
 <!DOCTYPE html>
 <html>
@@ -57,6 +53,10 @@ h2{
 label2{
 	padding-left: 25px;
 }
+a{
+	padding-left: 25px;
+	text-decoration: none;
+}
 </style>
 </head>
 <body>
@@ -81,8 +81,8 @@ label2{
       <input type="checkbox" checked="checked" name="remember"> Remember me
     </label><br><br>
 	
-    <span class="psw">Forgot <a href="#">password?</a></span>
-	<span> <?php echo $error; ?></span>
+    <a href="#">Forgot password?</a><br>
+	<a href="adminLogin.html">Login has admin</a><br>
 </form>
 </div>
 </body>
