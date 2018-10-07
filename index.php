@@ -1,5 +1,9 @@
 <?php
 	include('login.php');
+	if(isset($_SESSION['login_user']))
+	{
+		header("location: UserHompage.html");
+	}
 ?>
 <!DOCTYPE html>
 <html>
