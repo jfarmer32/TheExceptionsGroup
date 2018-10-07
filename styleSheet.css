@@ -1,39 +1,46 @@
-/* styleSheet.css Alpha Iteration 2
+/* styleSheet.css Version 3
 
-NOTES:
- -Default text is Calibri.
- -Can call "italic" for all headers.
- -Default text color is black.
- -Background color is gray #d1d3d4.
- -All text aligns to center.
- -h1 size = 40px ; h2 size = 25px. h3 size = 15px;
+   Created by: Bradley Lau
+
+   NOTES:
+   -Default font family is PT Sans Narrow.
+   -Header 2 font style is italic by default.
+   -Background color is gray.
+   -Font styles can be called manually.
 
 */
 
-body {
-	background-color: #d1d3d4;
+body{ /* <---- Main Body */
+	background-color: #d1d3d4;                   /* <---- Gray */
 	text-align: center;
-	color: black;
+	color: black;                                /* <---- Text Color */
+	font-family: 'PT Sans Narrow', sans-serif;
 }
 	
-h1{
-	font-family: "Calibri";
+h1{ /* <---- Header 1 */
 	font-size: 40px;
 	text-align: center;
+	font-weight: 1;
 }
 
-h2{
-	font-family: "Calibri";
+h2{ /* <---- Header 2 */
 	font-size: 25px;
 	text-align: center;
+	font-weight: 1;
+	font-style: italic;    /* <---- Header 2 is italic by default */
 }
 
-h3{
-	font-family: "Calibri";
+h3{ /* <---- Header 3 */
 	font-size: 15px;
 	text-align: center;
+	font-weight: 1;
 }
 
+/* Font styles can be called manually with methods bellow. 
+   
+   Ex: <h1 class="italic">Hello World.</h1>
+   	   <h2 class="normal">Hello World.</h2>
+*/
 h1.italic {
     font-style: italic;
 }
@@ -44,4 +51,16 @@ h2.italic {
 
 h3.italic {
     font-style: italic;
+}
+
+h1.normal {
+    font-style: normal;
+}
+
+h2.normal {
+    font-style: normal;
+}
+
+h3.normal {
+    font-style: normal;
 }
