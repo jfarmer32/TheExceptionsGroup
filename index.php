@@ -2,7 +2,7 @@
 	include('login.php');
 	if(isset($_SESSION['login_user']))
 	{
-		header("location: UserHompage.html");
+		echo file_get_contents("UserHompage.html");
 	}
 ?>
 <!DOCTYPE html>
