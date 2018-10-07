@@ -1,6 +1,5 @@
 <?php
 	include('login.php');
-	
 ?>
 <!DOCTYPE html>
 <html>
@@ -30,7 +29,8 @@ input[type=submit]{
 	margin: auto;
 	height: 300px;
 	background-color:#FFFFFF;
-
+	border-bottom-right-radius: 25px;
+	border-bottom-left-radius: 25px;
 }
 .l{
 	border: 3px solid;
@@ -48,6 +48,10 @@ input[type=submit]{
 }
 h2{
 	background-color:  #c2011b;
+	padding-left: 30px;
+}
+label2{
+	padding-left: 25px;
 }
 </style>
 </head>
@@ -61,15 +65,17 @@ h2{
 </div>
 <div class="login" align="left">
  <form action="index.php" method="post">
-	<br></br>
-    <input name="username" type="text" placeholder="Username" name="uname" id="username"> <br>
+	<br>
+	<label2>Username:</label2><br>
+    <input name="username" type="text" placeholder="Username" name="uname" id="username"> <br><br>
+	<label2>Password:</label2><br>
     <input name="password" type="password" placeholder="Password" name="psw"><br>
-	<br></br>
+	<br>
     <input name = "send" type = "submit" value = " Login ">
 	
     <label>
       <input type="checkbox" checked="checked" name="remember"> Remember me
-    </label><br><br><br>
+    </label><br><br>
 	
     <span class="psw">Forgot <a href="#">password?</a></span>
 	<span> <?php echo $error; ?></span>
