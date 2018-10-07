@@ -49,6 +49,7 @@ input[type=submit]{
 h2{
 	background-color:  #c2011b;
 	padding-left: 30px;
+	align: left;
 }
 label2{
 	padding-left: 25px;
@@ -57,6 +58,7 @@ a{
 	padding-left: 25px;
 	text-decoration: none;
 }
+
 </style>
 </head>
 <body>
@@ -81,7 +83,7 @@ a{
       <input type="checkbox" checked="checked" name="remember"> Remember me
     </label><br><br>
 	
-    <a href="#">Forgot password?</a><br>
+    <a href="#" >Forgot password?</a><br>
 	<a href="adminLogin.html">Login has admin</a><br>
 </form>
 </div>
