@@ -1,0 +1,168 @@
+/* styleSheet.css Version 3
+   Created by: Bradley Lau
+   NOTES:
+   -Default font family is PT Sans Narrow.
+   -Header 2 font style is italic by default.
+   -Background color is gray.
+   -Font styles can be called manually.
+*/
+
+input[type=submit]{
+    background-color: #c2011b;
+	border: 5px solid #808285;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+	
+	font-family: 'PT Sans Narrow', sans-serif;
+}
+
+input[type=submit]:hover:not(.active)
+{
+	background-color: #808285;
+	border: 5px solid #c2011b;
+	font-weight: bold;
+}
+
+
+ul.topbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 1px 0px  1px 0px;
+	/*height: 15%;*/
+	width:100%;
+	position:fixed;
+    overflow: hidden;
+    background-color: #c2011b;
+	border-bottom-style: groove;
+	
+}
+ul.topbar h1 {
+    color: white;
+	
+	
+	
+}
+hr
+{
+	position:fixed;
+	width:100%;
+}
+body{ /* <---- Main Body */
+	background-color: #d1d3d4;                   /* <---- Gray */
+	text-align: center;
+	color: black;                                /* <---- Text Color */
+	font-family: 'PT Sans Narrow', sans-serif;
+}
+	
+h1{ /* <---- Header 1 */
+	font-size: 40px;
+	text-align: center;
+	font-weight: 1;
+}
+
+h2{ /* <---- Header 2 */
+	font-size: 25px;
+	/*text-align: center;*/
+	font-weight: 1;
+	font-style: Bold;    /* <---- Header 2 is italic by default */
+}
+
+h3{ /* <---- Header 3 */
+	font-size: 15px;
+	text-align: center;
+	font-weight: 1;
+}
+
+/* Font styles can be called manually with methods bellow. 
+   
+   Ex: <h1 class="italic">Hello World.</h1>
+   	   <h2 class="normal">Hello World.</h2>
+*/
+h1.italic {
+    font-style: italic;
+}
+
+h2.italic {
+    font-style: italic;
+}
+
+h3.italic {
+    font-style: italic;
+}
+
+h1.normal {
+    font-style: normal;
+}
+
+h2.normal {
+    font-style: normal;
+}
+
+h3.normal {
+    font-style: normal;
+}
+
+body {margin: 0;}
+
+ul.sidenav {
+    list-style-type: none;
+    margin-top: 104px;
+    padding: 0;
+    width: 20%;
+    background-color: #003C71;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+}
+
+ul.sidenav li a {
+    display: block;
+    color: #FFF;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+ 
+ul.sidenav li a.active {
+    background-color: #c2011b;
+    color: white;
+}
+
+ul.sidenav li a:hover:not(.active) {
+    background-color: #808285;
+    color: white;
+}
+
+div.content {
+    margin-left: 25%;
+	padding-top: 104px;
+    
+    /*height: 1000px;*/
+	overflow: auto;
+}
+
+@media screen and (max-width: 900px) {
+    ul.sidenav {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+    ul.sidenav li a {
+        float: left;
+        padding: 15px;
+    }
+    div.content {margin-left: 0;}
+}
+
+@media screen and (max-width: 400px) {
+    ul.sidenav li a {
+        text-align: center;
+        float: none;
+    }
+}
+
+
+
+
