@@ -1,0 +1,51 @@
+Code for sending to & receiving from database
+
+Select all from demo_table
+ >> $sql = "SELECT * FROM `demo_table`";
+ 
+Select all from demo_admin
+ >> $sql = "SELECT * FROM `demo_admin`";
+
+Select username and password columns from demo_table
+ >> $sql = "SELECT username, password FROM `demo_table`";
+ 
+Add new cadet user
+ >> $sql = "INSERT into 'demo_table' 
+            VALUES 
+            ('username','password','fname','lname')";
+ 
+Remove old cadet user
+ >> $sql = "DELETE FROM 'demo_table'
+            WHERE username = 'username'";
+            
+Select piece of gear
+ >> $sql = "SELECT * FROM 'demo_gear' 
+            WHERE gearname = 'gearname'";
+
+INSERT into 'demo_gear'
+VALUES
+(,,,);
+
+
+
+
+
+
+<style>
+  html,body {
+    background: linear-gradient( rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) ), url("Digital_Camo_Background.jpg");
+  }
+  </style>
+
+
+<style>
+html,body {
+  background: linear-gradient( rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) ), url("Digital_Camo_Background.jpg");
+}
+input[type = submit]{
+    margin-right: 130px;
+}
+a[type = pass]{
+  padding-left: 170px;
+}
+</style>

@@ -1,0 +1,397 @@
+/* styleSheet.css Version 3
+
+   CSS used to format html and php pages
+
+	Created by The Exceptions (Justin, Paul, Zack, Behram, Bradley)
+*/
+
+body{ /* <---- Main Body */
+	background-color: #d1d3d4;
+	text-align: center;
+	color: black;
+	font-family: 'PT Sans Narrow', sans-serif;
+	background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(images/Clocks.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 100%;
+	margin: 0;
+}
+
+table, th, td { /* <---- Table */
+	border: 1px solid black;
+}
+
+th{
+	padding: 15px;
+}
+
+td{
+	text-align: left;
+	padding: 15px;
+}
+
+input[type=submit]{ /* <---- Input of Type Submit */
+	background-color: #c2011b;
+	border: 5px solid #808285;
+	color: white;
+	padding: 8px 16px;
+	text-decoration: none;
+	font-size: 15px;
+	cursor: pointer;
+	font-family: 'PT Sans Narrow', sans-serif;
+	border-bottom-right-radius: 8px;
+	border-bottom-left-radius: 8px;
+	border-top-right-radius: 8px;
+	border-top-left-radius: 8px;
+	float: right;
+	margin-bottom: 21px;
+	margin-right: 100px;
+}
+
+input[type=submit]:hover:not(.active){ /* <---- Input of Type Submit not hover */
+	background-color: #808285;
+	border: 5px solid #c2011b;
+	font-weight: bold;
+}
+
+input[type=text], input[type=password]{ /* <---- Input Text and Password */
+	background-color: white;
+	padding: 12px 20px;
+	margin: 8px 50px ;
+	display: inline-block;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+	border-radius: 10px;
+	width: 300px;
+}
+
+.login{ /* <---- Login Page */
+	border: 3px solid;
+	border-color: black;
+	padding:10px;
+	width: 400px;
+	margin: auto;
+	height: 345px;
+	background-color:#d1d3d4;
+	border-bottom-right-radius: 25px;
+	border-bottom-left-radius: 25px;
+	font-family: 'PT Sans Narrow', sans-serif;
+}
+
+.workBox{ /* <---- Login Page */
+	border: 3px solid;
+	border-color: black;
+	padding:10px;
+	width: 500px;
+	margin: auto;
+	height: 345px;
+	background-color:#d1d3d4;
+	border-bottom-right-radius: 25px;
+	border-bottom-left-radius: 25px;
+	font-family: 'PT Sans Narrow', sans-serif;
+	text-align: center;
+}
+
+.topWorkBox{ /* <---- Top Login Page */
+	border: 3px solid;
+	border-color: black;
+	border-top-left-radius: 25px;
+	border-top-right-radius: 25px;
+	padding:10px;
+	width: 500px;
+	margin: auto;
+	background-color:  #003C71;
+	color: #FFFFFF;
+}
+
+.topLogin{ /* <---- Top Login Page */
+	border: 3px solid;
+	border-color: black;
+	border-top-left-radius: 25px;
+	border-top-right-radius: 25px;
+	padding:10px;
+	width: 400px;
+	margin: auto;
+	background-color:  #c2011b;
+	color: #FFFFFF;
+}
+
+ul.topbar { /* <---- Top Bar */
+	list-style-type: none;
+	margin: 0px;
+	padding: 1px 0px  7px 0px;
+	height: auto;
+	width:100%;
+	overflow: hidden;
+	background-color: #c2011b;
+	position: fixed;
+	top: 0;
+	left: 0;
+
+}
+
+ul.topbar h1{ /* <---- Top Bar Header 1 */
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+	color:white;
+	font-family: 'PT Sans Narrow', sans-serif;
+}
+
+ul.BufferBar { /* <---- Buffer Bar */
+	list-style-type: none;
+	margin-top: 103px;
+	padding: 1px 0px  1px 0px;
+	width:100%;
+	overflow: hidden;
+	background-color: #003C71;
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+ul.BufferBar h3{ /* <---- Buffer Bar Header 3 */
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+	color:white;
+	font-family: 'PT Sans Narrow', sans-serif;
+	font-size: 27px;
+	margin-left: 45px;
+	text-align: left;
+}
+hr
+{
+	position:fixed;
+	width:100%;
+}
+
+h2{ /* <---- Header 2 */
+	font-size: 25px;
+}
+
+h3{ /* <---- Header 3 */
+	font-size: 15px;
+	text-align: center;
+	font-weight: 100;
+}
+
+
+h1.italic { /* <---- Header 1 Italic */
+	font-style: italic;
+}
+
+h2.italic { /* <---- Header 2 Italic */
+	font-style: italic;
+}
+
+h3.italic { /* <---- Header 3 Italic */
+	font-style: italic;
+}
+
+
+h2.normal { /* <---- Header 2 Normal */
+	font-style: normal;
+}
+
+ul.sidenav { /* <---- Sidenav */
+	background-color: #d1d3d4;
+	list-style-type: none;
+	margin-top: 196.5px;
+	padding: 0;
+	width: 20%;
+	position: fixed;
+	top: 0;
+	height: 100%;
+	overflow: auto;
+	left: 0;
+}
+
+ul.sidenav li a { /* <---- Sidenav li a*/
+	display: block;
+	color: black;
+	padding: 8px 16px;
+	font-size: 25px;
+	text-decoration: none;
+}
+
+ul.sidenav li a.active { /* <---- Sidenav li a.active*/
+	background-color: #c2011b;
+	color: white;
+}
+
+ul.sidenav li a:hover:not(.active) { /* <---- Sidenav li a:hover:not active; */
+	background-color: #808285;
+	color: white;
+}
+
+div.content { /* <---- Content */
+	margin-top: 225px;
+	margin-left: 25%;
+	margin-right: 5%;
+	margin-bottom: 5%;
+	padding-left: 50px;
+	padding-bottom: 50px;
+	padding-right: 50px;
+	background-color: #d1d3d4;
+	height: 100%;
+	border-style: groove;
+	overflow: auto;
+	border-bottom-right-radius: 8px;
+	border-bottom-left-radius: 8px;
+	border-top-right-radius: 8px;
+	border-top-left-radius: 8px;
+}
+
+div.hp_content { /* <---- HP Content */
+	margin-top: 0px;
+	margin-left: 25%;
+	margin-right: 5%;
+	margin-bottom: 50px;
+	padding-left: 50px;
+	padding-bottom: 50px;
+	padding-right: 50px;
+	background-color: #d1d3d4;
+	height: 100%;
+	border-style: inset;
+	overflow: auto;
+	border-bottom-right-radius: 8px;
+	border-bottom-left-radius: 8px;
+	border-top-right-radius: 8px;
+	border-top-left-radius: 8px;
+}
+
+div.admin_hp { /* <---- Admin HP */
+	border-bottom: 3px solid;
+	margin-bottom: 15px;
+	margin-top: 15px;
+}
+
+div.hp_image { /* <---- HP Image */
+	margin-top: 50px;
+	border-radius: 5%;
+	vertical-align: bottom;
+}
+
+img.hp { /* <---- Image of HP */
+	border-radius: 5%;
+	width: 100%;
+	height: auto;
+}
+
+@media screen and (max-width: 900px) { /* <---- Screen (sidnav, content, padding_container)*/
+	ul.sidenav {
+		width: 100%;
+		height: auto;
+		position: relative;
+		margin-top: 0px;
+	}
+	ul.sidenav li a {
+		float: left;
+		padding: 15px;
+	}
+	div.content {
+		margin-left: 5%;
+		margin-top: 0%;
+	}
+	div.padding_container {
+		visibility: hidden;
+	}
+}
+
+@media screen and (max-width: 900px) { /* <---- Screen (topbar)*/
+	ul.topbar {
+		width: 100%;
+		height: auto;
+		position: relative;
+		margin-top: 0px;
+	}
+	ul.topbar li a {
+		float: left;
+		padding: 15px;
+	}
+}
+
+@media screen and (max-width: 900px) { /* <---- Sidenav (bufferbar)*/
+	ul.BufferBar {
+		width: 100%;
+		height: auto;
+		position: relative;
+		margin-top: 0px;
+		margin-bottom: 0px;
+	}
+	ul.Bufferbar li a {
+		float: left;
+		padding: 15px;
+
+	}
+
+}
+
+@media screen and (max-width: 400px) { /* <---- Sidenav (sidenav)*/
+	ul.sidenav li a {
+		text-align: center;
+		float: none;
+	}
+}
+
+@media only screen and (max-width:620px) {
+	/* For mobile phones: */
+	.content, ul.topbar {
+		width:100%;
+	}
+}
+
+.tooltip {
+	position: relative;
+	display: inline-block;
+	text-align: left;
+}
+
+.tooltip .tooltiptext {
+	visibility: hidden;
+	width: 120px;
+	background-color: #555;
+	color: #fff;
+	text-align: center;
+	border-radius: 6px;
+	padding: 5px 0;
+	position: absolute;
+	z-index: 1;
+	bottom: 125%;
+	left: 50%;
+	margin-left: -60px;
+	opacity: 0;
+	transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+	content: "";
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	margin-left: -5px;
+	border-width: 5px;
+	border-style: solid;
+	border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+	visibility: visible;
+	opacity: 1;
+}
+
+a{
+
+	padding-left: 125px;
+	padding-right: 0px;
+	color: Black;
+	text-decoration: none;
+}
+
+a[type=pass]{
+
+	padding-left: 135px;
+	padding-right: 0px;
+	color: Black;
+	text-decoration: none;
+}
+
+.psw{
+	margin: 0 23px;
+}

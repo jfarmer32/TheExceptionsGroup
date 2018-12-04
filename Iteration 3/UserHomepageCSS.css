@@ -1,0 +1,230 @@
+/* UserHomepageCSS.css
+   
+   CSS used to format html and php pages for UserHomepage
+  
+   Created by The Exceptions (Justin, Paul, Zack, Behram, Bradley)
+*/
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body { /* <---- Main Body */
+	margin: 0;
+	font-family: 'Work Sans', sans-serif;
+	font-weight: 400;
+  position: fixed;
+  z-index: 5;
+  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("Heth_Background.jpg");
+}
+header{ /* <---- Header */
+  background: #003C71;
+  text-align: center;
+  position: fixed;
+  z-index: 12;
+  width: 100%;
+  margin-top: 70px;
+  border-top-style: solid;
+  overflow: hidden;
+}
+input[type=submit]{ /* <---- Input of Submit */
+	background-color: #c2011b;
+	border: 5px solid #808285;
+	color: white;
+	text-decoration: none;
+	font-size: 15px;
+	cursor: pointer;
+	font-family: 'PT Sans Narrow', sans-serif;
+	border-bottom-right-radius: 8px;
+	border-bottom-left-radius: 8px;
+	border-top-right-radius: 8px;
+	border-top-left-radius: 8px;
+	margin-left: 2%;
+}
+
+input[type=submit]:hover:not(.active){ /* <---- Input of Submit (Active) */
+	background-color: #808285;
+	border: 5px solid #c2011b;
+	font-weight: bold;
+}
+
+h3{ /* <---- Header 3 */
+  text-align: center;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  color:white;
+  font-family: 'PT Sans Narrow', sans-serif;
+  margin-top: 2%;
+  background: red;
+}
+nav { /* <---- Nav */
+  position: absolute;
+  text-align: left;
+  top: 100%;
+  left: 0;
+  background: var(--background);
+  width: 100%;
+}
+
+nav ul { /* <---- Nav ul */
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li { /* <---- Nav li */
+  margin-bottom: 1em;
+  margin-left: 1em;
+}
+
+nav a { /* <---- Nav a */
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  text-decoration: none;
+  font-size: 1.2rem;
+  opacity: 0;
+}
+
+.nav-toggle:checked ~ nav { /* <---- Nav Toggled */
+  transform: scale(1,1);
+}
+
+.nav-toggle:checked ~ nav a { /* <---- Nav Toggled */
+
+  opacity: 1;
+  transition: opacity 250ms ease-in-out 250ms;
+}
+
+@media screen and (min-width: 800px) { /* <---- Screen with Header*/
+  header {
+    display: grid;
+    grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
+  }
+
+  .logo {
+    grid-column: 2 / 3;
+  }
+
+  nav {
+    all: unset;
+    grid-column: 3 / 4;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  nav ul {
+    display: flex;
+  }
+
+  nav li {
+    margin-left: 3em;
+    margin-bottom: 0;
+  }
+
+  nav a {
+    opacity: 1;
+    position: relative;
+  }
+}
+
+.sidenav {
+    height: 100%;
+    width: 175px;
+    position: fixed;
+    z-index: 11;
+    top: 150px;
+    left: 0;
+    background-color: #d1d3d4;
+  	list-style-type: none;
+    overflow-x: hidden;
+}
+
+.sidenav a {
+    padding: 6px 8px 6px 16px;
+    margin-bottom: 30px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+}
+
+.sidenav a:hover {
+  background-color:  #808285;
+    color: #f1f1f1;
+}
+.sidenav a.active {
+	background-color: #c2011b;
+	color: white;
+}
+div.title{
+  height: 70px;
+  background-color: #c2011b;
+  position: fixed;
+  z-index: 12;
+  width: 100%;
+
+}
+
+div.contents{
+   position: fixed;
+   border: 3px solid black;
+   top: 175px;
+   left: 220px;
+   width: 80%;
+   height: 72%;
+   background-color: lightgrey;
+   overflow: hidden;
+   z-index: 10;
+}
+label{
+  position: fixed;
+  top: 15px;
+  left: 35%;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  color:white;
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-size: 30px;
+  text-overflow: hidden;
+}
+h1{ /* <---- Header 1 */
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+@media screen and (max-width: 1125px) { /* <---- Screen with Div contents */
+  div.contents{
+    border: 3px solid green;
+    max-width: 70%;
+  }
+
+@media screen and (max-width: 800px) { /* <---- Screen with Div contents */
+    div.contents{
+      top: 210px;
+      border: 3px solid blue;
+      max-width: 90%;
+      left: 75px;
+    }
+    div.sidenav{
+      width: 100%;
+      height: 40px;
+      position: fixed;
+      float: right;
+      overflow: hidden;
+      top: 130px;
+    }
+    div.sidenav a{
+      	float: left;
+    }
+    label{
+      left: 15%;
+    }
+    header{
+      height: 60px;
+
+    }
+    .logo{
+      margin-top: 10px;
+    }
+    div.title{
+      text-overflow: hidden;
+    }

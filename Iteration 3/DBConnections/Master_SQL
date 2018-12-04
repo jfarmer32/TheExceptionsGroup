@@ -1,0 +1,49 @@
+CREATE TABLE Cadet (
+  Username varchar(45) NOT NULL,
+  Password varchar(45) NOT NULL,
+  Fname varchar(45) NOT NULL,
+  Lname varchar(45) NOT NULL,
+  PRIMARY KEY  (Username)
+);
+
+CREATE TABLE Admin (
+  Username varchar(45) NOT NULL,
+  Password varchar(45) NOT NULL,
+  Rank varchar(45) NOT NULL,
+  Lname varchar(45) NOT NULL,
+  PRIMARY KEY  (Username)
+);
+
+CREATE TABLE Gear (
+  Id INT NOT NULL AUTO_INCREMENT,
+  Gearname varchar(45) NOT NULL,
+  Allowed INT(2),
+  On_Hand INT(4),
+  Issued INT(4),
+  PRIMARY KEY  (ID, Gearname)
+);
+
+CREATE TABLE Cadet_Gear (
+  Id INT NOT NULL AUTO_INCREMENT,
+  Username varchar(45) NOT NULL,
+  PRIMARY KEY  (Id, Username)
+);
+
+CREATE TABLE Alert (
+  Id INT NOT NULL AUTO_INCREMENT,
+  Username varchar(45) NOT NULL,
+  Subject varchar(45) NOT NULL,
+  Message varchar(255) NOT NULL,
+  PRIMARY KEY  (Id, Username)
+);
+
+CREATE OR REPLACE TRIGGER update_cadet_gear  
+AFTER INSERT ON Gear  
+  v_Gearname varchar(45);  
+BEGIN 
+  SELECT Gearname INTO v_Gearname
+  FROM Gear ORDER BY Id DESC Limit 1;
+
+  EXECUTE IMMEDIATE 'ALTER TABLE Cadet_Gear ADD v_Gearname INT(2);'
+END;
+/

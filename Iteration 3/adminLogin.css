@@ -1,0 +1,96 @@
+/*   adminLogin
+	 
+     The style sheet used for the admin login page
+
+     Created by The Exceptions (Justin, Paul, Zack, Behram, Bradley)
+*/
+
+html,body { /* <---- HTML and Body */
+	background: linear-gradient( rgba(0, 0, 0, .6), rgba(0, 0, 0, .6) ), url("Muse_Background.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 100%;
+	margin: 0;
+}
+title /* <---- Title */
+{
+	font-family: 'PT Sans Narrow', sans-serif;
+}
+
+input[type=text], input[type=password] { /* <---- Input of type Text and Password */
+    background-color: white;
+    padding: 12px 20px;
+    margin: 8px 50px ;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+	border-radius: 10px;
+	width: 300px;
+}
+input[type=submit]{ /* <---- Input of Submit */
+	margin: 0 110px;
+	border-bottom-right-radius: 8px;
+	border-bottom-left-radius: 8px;
+    border-top-right-radius: 8px;
+	border-top-left-radius: 8px;
+}
+.login{ /* <---- from Login */
+    border: 3px solid;
+	border-color: black;
+	padding:10px;
+	width: 400px;
+	margin: auto;
+	height: 300px;
+	background-color:#d1d3d4;
+	border-bottom-right-radius: 25px;
+	border-bottom-left-radius: 25px;
+	font-family: 'PT Sans Narrow', sans-serif;
+}
+.topLogin{ /* <---- from topLogin */
+	border: 3px solid;
+	border-color: black;
+	border-top-left-radius: 25px;
+	border-top-right-radius: 25px;
+	padding:10px;
+	width: 400px;
+	margin: auto;		
+	background-color:  #c2011b;
+	color: #FFFFFF;
+}
+.psw{ /* <---- password */
+	margin: 0 23px;
+}
+h1{ /* <---- Header 1 */
+	text-color: white;
+}
+h2{ /* <---- Header 2 */
+	background-color:  #c2011b;
+	padding-left: 30px;
+	font-family: 'PT Sans Narrow', sans-serif;
+}
+label2{ /* <---- Label 2 */
+	padding-left: 25px;
+}
+a{
+	
+	padding-left: 125px;
+	padding-right: 0px;
+	color: Black;
+	text-decoration: none;
+}
+
+a[type=pass]{ /* <---- Type Pass */
+	
+	padding-left: 135px;
+	padding-right: 0px;
+	color: Black;
+	text-decoration: none;
+}
+
+a[type=return]{ /* <---- Type Return */
+	
+	padding-left: 165px;
+	padding-right: 0px;
+	color: Black;
+	text-decoration: none;
+}

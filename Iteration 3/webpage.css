@@ -1,0 +1,337 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html,body {
+	margin: 0;
+	font-family: 'Work Sans', sans-serif;
+	font-weight: 400;
+  position: relative;
+  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(images/Clocks.jpg);
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+header{
+  background: #003C71;
+  text-align: center;
+  position: fixed;
+  z-index: 12;
+  width: 100%;
+  margin-top: 70px;
+  border-top-style: solid;
+  overflow: hidden;
+}
+table, th, td { /* <---- Table */
+	border: 1px solid black;
+}
+
+th{
+	padding: 15px;
+}
+
+td{
+	text-align: left;
+	padding: 15px;
+}
+
+input[type=submit]{
+	background-color: #c2011b;
+	border: 5px solid #808285;
+	color: white;
+	text-decoration: none;
+  padding: 8px 16px;
+	font-size: 15px;
+	cursor: pointer;
+	font-family: 'PT Sans Narrow', sans-serif;
+	border-bottom-right-radius: 8px;
+	border-bottom-left-radius: 8px;
+	border-top-right-radius: 8px;
+	border-top-left-radius: 8px;
+	margin-left: 10%;
+}
+
+input[type=text], input[type=password]{ /* <---- Input Text and Password */
+	background-color: white;
+	padding: 12px 20px;
+	margin: 8px 50px ;
+	display: inline-block;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+	border-radius: 10px;
+	width: 300px;
+}
+
+input[type=submit]:hover:not(.active){
+	background-color: #808285;
+	border: 5px solid #c2011b;
+	font-weight: bold;
+}
+
+h3{
+  text-align: center;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  color:white;
+  font-family: 'PT Sans Narrow', sans-serif;
+  margin-top: 2%;
+  background: red;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  margin-bottom: 1em;
+  margin-left: 1em;
+}
+
+nav a {
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  text-decoration: none;
+  font-size: 1.2rem;
+  opacity: 0;
+  margin-left: 50px;
+}
+
+.nav-toggle:checked ~ nav {
+  transform: scale(1,1);
+}
+
+.nav-toggle:checked ~ nav a {
+  opacity: 1;
+  transition: opacity 250ms ease-in-out 250ms;
+}
+
+
+@media screen and (min-width: 925px) {
+
+  header {
+    display: grid;
+    grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
+  }
+
+  .logo {
+    grid-column: 2 / 3;
+  }
+
+  nav {
+    all: unset;
+    grid-column: 3 / 4;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  nav ul {
+    display: flex;
+  }
+
+  nav li {
+    margin-left: 3em;
+    margin-bottom: 0;
+  }
+
+  nav a {
+    opacity: 1;
+    position: relative;
+  }
+}
+
+.sidenav {
+    height: 100%;
+    width: 175px;
+    position: fixed;
+    z-index: 11;
+    top: 150px;
+    left: 0;
+    background-color: #d1d3d4;
+  	list-style-type: none;
+    overflow-x: hidden;
+}
+
+.sidenav input{
+  font-size: 18px;
+  margin-top: 10px;
+  padding: 5px;
+}
+
+.sidenav a {
+    padding: 6px 8px 6px 16px;
+    margin-bottom: 30px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+}
+
+.sidenav a:hover {
+  background-color:  #808285;
+    color: #f1f1f1;
+}
+.sidenav a.active {
+	background-color: #c2011b;
+	color: white;
+}
+div.title{
+  height: 70px;
+  background-color: #c2011b;
+  position: fixed;
+  z-index: 12;
+  width: 100%;
+
+}
+div.contents{
+   position: fixed;
+   border: 3px solid black;
+   top: 150px;
+   left: 175px;
+   width: 88.5%;
+   height: 85%;
+   overflow: auto;
+   background-color: transparent;
+   padding-bottom: 100px;
+}
+div.welcome{
+  position: relative;
+  border: 3px solid black;
+  top: auto;
+  left: 60px;
+  width: 90%;
+  height: auto;
+  text-align: center;
+  margin-top: 35px;
+  background-color: lightgrey;
+  border-radius: 25px;
+  padding-bottom: 35px;
+}
+div.weekly{
+  position: relative;
+  border: 3px solid black;
+  top: auto;
+  left: 60px;
+  width: 90%;
+  height: auto;
+  text-align: center;
+  margin-top: 35px;
+  background-color: lightgrey;
+  border-radius: 25px;
+}
+div.monthly{
+  position: relative;
+  border: 3px solid black;
+  top: auto;
+  left: 60px;
+  width: 90%;
+  height: auto;
+  text-align: center;
+  margin-top: 35px;
+  margin-bottom: 50px;
+  background-color: lightgrey;
+  border-radius: 25px;
+}
+label{
+  position: fixed;
+  top: 15px;
+  left: 35%;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  color:white;
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-size: 35px;
+  text-overflow: hidden;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+div.hp_image { /* <---- HP Image */
+	margin-top: 50px;
+	border-radius: 5%;
+	vertical-align: bottom;
+}
+
+img.hp { /* <---- Image of HP */
+	border-radius: 5%;
+	width: 90%;
+	height: auto;
+}
+h1{
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+h4{
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+
+
+@media screen and (max-width: 1500px) {
+  div.contents{
+    max-width: 88.5%;
+  }
+
+@media screen and (max-width: 1400px) {
+  div.contents{
+    max-width: 87.5%;
+  }
+  div.welcome{
+    width: 85%;
+  }
+  div.weekly{
+    width: 85%;
+  }
+  div.monthly{
+    width: 85%;
+  }
+
+@media screen and (max-width: 1125px) {
+  div.contents{
+    max-width: 84.3%;
+  }
+  div.welcome{
+    width: 80%;
+  }
+  div.weekly{
+    width: 80%;
+  }
+  div.monthly{
+    width: 80%;
+  }
+
+@media screen and (max-width: 925px) {
+    div.contents{
+      top: 210px;
+      max-width: 90%;
+      left: 50px;
+      border: none;
+    }
+    div.sidenav{
+      width: 100%;
+      height: 60px;
+      position: fixed;
+      float: right;
+      overflow: hidden;
+      top: 132px;
+    }
+    input=[type=submit]{
+      margin-top: 20px;
+    }
+    div.sidenav a{
+      	float: left;
+        display: block;
+        height: 100%;
+    }
+    label{
+      left: 15%;
+    }
+    header{
+      height: 65px;
+    }
+    .logo{
+      margin-top: 10px;
+    }
+    div.title{
+      text-overflow: hidden;
+    }
